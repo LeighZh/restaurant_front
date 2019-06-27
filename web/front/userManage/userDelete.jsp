@@ -87,7 +87,7 @@
 					data:"judge=delete&name="+$("#email").val()+"&password="+$("#password").val()+"&number="+$("#number").val(),
 					success:function(message){
 						if(message == "true"){
-							show_msg('注销成功，  正在为您跳转...','/restaurant/index.jsp');								
+							show_msg('注销成功，  正在为您跳转...','/restaurant/index.html');
 						}else{
 							show_err_msg('密码或预留号码错误，注销失败');
 							$('#password').focus();

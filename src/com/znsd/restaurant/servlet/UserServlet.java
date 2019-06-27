@@ -48,11 +48,11 @@ public class UserServlet extends HttpServlet {
 	}
 	
 	public void login(HttpServletRequest request, HttpServletResponse response,UserService userServlet){
-		String name = request.getParameter("name");
-		String password = request.getParameter("password");
+		String name = request.getParameter("loginName");
+		String password = request.getParameter("loginPwd");
 		boolean loginJudge = userServlet.loginJudge(name,password);
 		if(loginJudge){
-			request.getSession().setAttribute("userName", name);
+			request.getSession().setAttribute("loginName", name);
 		}
 		try {
 			response.getWriter().print(JSON.toJSONString(loginJudge));
@@ -62,14 +62,17 @@ public class UserServlet extends HttpServlet {
 	}
 	
 	public void register(HttpServletRequest request, HttpServletResponse response,UserService userServlet){
-		String name = request.getParameter("name");
-		String password = request.getParameter("password");
-		String number = request.getParameter("number");
-		long lon = Long.parseLong(number);
-		UserBean userBean = new UserBean(name,password,lon);
+		String loginName = request.getParameter("loginName");
+		String loginPwd = request.getParameter("loginPwd");
+		String trueName = request.getParameter("trueName");
+		System.out.println(trueName);
+		String email = request.getParameter("email");
+		String phone = request.getParameter("phone");
+		String address = request.getParameter("address");
+		UserBean userBean = new UserBean(loginName, loginPwd, trueName, email, phone, address);
 		boolean register = userServlet.register(userBean);
 		if(register!=true){
-			request.getSession().setAttribute("userName", name);
+			request.getSession().setAttribute("loginName", loginName);
 		}
 		try {
 			response.getWriter().print(JSON.toJSONString(register));
@@ -90,16 +93,16 @@ public class UserServlet extends HttpServlet {
 		String password = request.getParameter("password");
 		String number = request.getParameter("number");
 		long lon = Long.parseLong(number);
-		UserBean userBean = new UserBean(name,password,lon);
-		boolean register = userServlet.delete(userBean);
-		if(register==true){
+		//UserBean userBean = new UserBean(name,password,lon);
+		//boolean register = userServlet.delete(userBean);
+		/*if(register==true){
 			request.getSession().removeAttribute("userName");
 		}
 		try {
 			response.getWriter().print(JSON.toJSONString(register));
 		} catch (IOException e) {
 			e.printStackTrace();
-		}
+		}*/
 	}
 	
 	public void afterRegister(HttpServletRequest request, HttpServletResponse response,UserService userServlet){

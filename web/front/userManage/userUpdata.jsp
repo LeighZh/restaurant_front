@@ -87,7 +87,7 @@
 					url: "/restaurant/userServlet",
 					data:"judge=update&name="+$("#email").val()+"&password="+$("#password").val(),
 					success:function(message){
-						show_msg('修改成功，  正在为您跳转...','/restaurant/front/userManage/index.jsp');								
+						show_msg('修改成功，  正在为您跳转...','/restaurant/front/userManage/index.html');
 					}
 				})
 			}

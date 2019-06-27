@@ -10,7 +10,7 @@ input:focus, select:focus, textarea:focus {background-color:#fff}
 
 .flexslider ul, .flexsliderservices ul, .es-carousel ul li img:hover,  ul.team li img:hover, #recipecontainer ul a:hover.fancyboxpopup, #recipecontainer ul li a:hover img, .bloggallery:hover, .blogslider:hover, ul.popular li img, .leftpart .comment img, ul.featured li img:hover  { background-color:#fff }
 
-#topnav ul > li.active, #topnav ul > li:hover, #topnav ul ul,  #flexsliderservices, ul.featured li img, .es-carousel ul li img,  ul.team li img, .imgbrdboth, #recipecontainer ul a.fancyboxpopup,  #contactmap,  {background: #fff}
+#topnav ul > li.active, #topnav ul > li:hover, #topnav ul ul,  #flexsliderservices, ul.featured li img, .es-carousel ul li img,  ul.team li img, .imgbrdboth, #recipecontainer ul a.fancyboxpopup,  #contactmap {background: #fff}
 
  #footer  { border-top:5px solid #fff }
 #topnav ul li.active a, #topnav ul > li:hover > a,    #topnav ul li ul li, #topnav ul li.active a,  #topnav ul li ul > li:hover > a, #topnav li.submenu,  .paging li.current, .headerstrip  {background: #508706 url("../images/crossline.png") repeat 0 0;  }
