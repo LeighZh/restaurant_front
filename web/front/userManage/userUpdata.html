@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>注册</title>
+    <title>修改密码</title>
 
 
     <link rel="stylesheet" href="../css/supersized.css">
@@ -14,7 +14,7 @@
     <script src="../js/supersized.3.2.7.min.js"></script>
     <script src="../js/supersized-init.js"></script>
     <script src="../js/scripts.js"></script>
-    <script type="text/javascript" src="../js/register.js"></script>
+    <script type="text/javascript" src="../js/userUpdata.js"></script>
 </head>
 
 <body>
@@ -23,43 +23,30 @@
     <div class="main_box">
         <div class="login_box">
             <div class="login_logo">
-                <!-- <img src="../images/logo.png" > -->
-                <h1>注册</h1>
+                <h1>修改密码</h1>
             </div>
 
             <div class="login_form">
                 <form action="####" id="login_form" method="post">
                     <div class="form-group">
                         <label for="j_username" class="t">用户名：</label>
-                        <input id="loginName" value="" name="loginName" type="text" class="form-control x319 in"
-                               autocomplete="off">
+                        <input id="loginName" type="text" class="form-control x319 in"
+                               autocomplete="off" disabled="disabled">
                     </div>
                     <div class="form-group">
-                        <label for="j_password" class="t">密码：</label>
+                        <label for="j_password" class="t">新密码：</label>
                         <input id="loginPwd" value="" name="loginPwd" type="password"
                                class="password form-control x319 in">
                     </div>
                     <div class="form-group">
-                        <label for="j_password" class="t">真实姓名：</label>
-                        <input id="trueName" value="" name="trueName" type="text"
-                               class="form-control x319 in">
-                    </div>
-                    <div class="form-group">
-                        <label for="" class="t">电子邮箱：</label>
-                        <input id="email" value="" name="email" type="text" class="form-control x319 in">
-                    </div>
-                    <div class="form-group">
-                        <label for="" class="t">手机号码：</label>
-                        <input id="phone" value="" name="phone" type="text" class="form-control x319 in">
-                    </div>
-                    <div class="form-group">
-                        <label for="" class="t">送货地址：</label>
-                        <input id="address" value="" name="address" type="text" class="form-control x319 in">
+                        <label for="j_password" class="t">确认密码：</label>
+                        <input id="loginPwdTwo" value="" name="loginPwd" type="password"
+                               class="password form-control x319 in">
                     </div>
                     <div class="form-group space">
                         <label class="t"></label>
                         <button type="button"  id="submit_btn"
-                                class="btn btn-primary btn-lg">&nbsp;注&nbsp;册&nbsp </button>
+                                class="btn btn-primary btn-lg">&nbsp;提&nbsp;交&nbsp </button>
                         <input type="reset" value="&nbsp;重&nbsp;置&nbsp;" class="btn btn-default btn-lg">
                     </div>
                 </form>

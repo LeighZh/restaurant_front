@@ -90,7 +90,7 @@ public class UserDaoImpl implements UserDao{
 		Connection connection = DBUtils.getConnection();
 		PreparedStatement prepare = null;
 		try {
-			prepare = connection.prepareStatement("UPDATE USER SET PASSWORD = ? WHERE userName=?");
+			prepare = connection.prepareStatement("UPDATE user SET loginPwd = ? WHERE loginName=?");
 			prepare.setString(2, name);
 			prepare.setString(1, password);
 			prepare.execute();
